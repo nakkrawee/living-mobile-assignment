@@ -1,4 +1,5 @@
-import { Column, DataType, ForeignKey, Model, Table } from 'sequelize-typescript';
+import { Column, DataType, ForeignKey, HasMany, Model, Table } from 'sequelize-typescript';
+import { MenuModel } from 'src/menus/menu.model';
 import { StoreModel } from 'src/stores/store.model';
 
 @Table({
@@ -24,6 +25,9 @@ export class CategoryModel extends Model {
     })
     @ForeignKey(()=> StoreModel)
     storeId: string;
+
+    @HasMany(()=>MenuModel)
+    menuId: MenuModel[]
 
 
 }
