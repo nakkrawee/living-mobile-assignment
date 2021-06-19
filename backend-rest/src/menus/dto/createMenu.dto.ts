@@ -3,6 +3,11 @@ import { IsAlpha, IsNotEmpty, IsString, Length } from 'class-validator';
  
  
 export class CreateMenuDto {
+   
+   @IsNotEmpty()
+   @ApiProperty()
+   categoryId: string;
+
    @IsString()
    @Length(3,50)
    @IsNotEmpty()
@@ -12,4 +17,5 @@ export class CreateMenuDto {
    @IsAlpha()
    @ApiProperty()
    price: number;
+
 }
