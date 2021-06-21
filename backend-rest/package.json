@@ -26,6 +26,7 @@
     "@nestjs/platform-express": "^7.6.15",
     "@nestjs/sequelize": "^0.2.0",
     "@nestjs/swagger": "^4",
+    "class-transformer": "^0",
     "class-validator": "^0",
     "pg": "^8.6.0",
     "pg-hstore": "^2.3.4",
